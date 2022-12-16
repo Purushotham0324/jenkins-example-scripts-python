@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  tools {
+        python3 'python3'
+    }
+    environment{
+    }
   stages {
     stage('version') {
       steps {
