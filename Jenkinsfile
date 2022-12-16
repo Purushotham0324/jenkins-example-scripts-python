@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools {
+        nodejs 'nodejs'
+        python3 'python3'
+    }
   stages {
     stage('version') {
       steps {
