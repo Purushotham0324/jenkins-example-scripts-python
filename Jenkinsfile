@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  tools {
+        python 'python'
+    }
   stages {
     stage('version') {
       steps {
@@ -8,7 +11,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 hello.py'
+        sh 'python hello.py'
       }
     }
   }
